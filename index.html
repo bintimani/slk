@@ -6,10 +6,10 @@
   <title>K-Rent Sierra Leone – Heavy Equipment Rental</title>
   <meta name="description" content="Reliable heavy equipment rental in Sierra Leone: excavators, bulldozers, wheel loaders."/>
 
-  <!-- Google Fonts: Finlandica -->
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Finlandica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -33,7 +33,7 @@
     }
 
     body {
-      font-family: 'Finlandica', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--clr-gray);
       color: var(--clr-text);
       line-height: 1.7;
@@ -61,8 +61,14 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .logo {
-      font-size: 1.6rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: white;
       text-decoration: none;
@@ -70,6 +76,14 @@
 
     .logo span {
       color: var(--clr-green);
+    }
+
+    .email {
+      font-size: 0.75rem;
+      color: white;
+      opacity: 0.9;
+      margin-top: 0.3rem;
+      text-decoration: none;
     }
 
     .nav-links {
@@ -84,7 +98,6 @@
       font-weight: 500;
       font-size: 1.05rem;
       transition: var(--transition);
-      position: relative;
     }
 
     .nav-links a:hover {
@@ -105,7 +118,7 @@
       height: 100vh;
       min-height: 680px;
       background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%),
-                  url('https://images.unsplash.com/photo-1649807533255-bbc9c9fb7d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=90') center/cover no-repeat;
+                  url('img/exc.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -196,6 +209,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     .card:hover {
@@ -215,6 +229,7 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     .card h3 {
@@ -243,16 +258,18 @@
       left: 0;
     }
 
-    .badge {
+    .coming-soon {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: var(--clr-blue);
-      color: white;
-      padding: 0.35rem 0.9rem;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #888;
+      background: rgba(255,255,255,0.9);
+      padding: 0.25rem 0.8rem;
       border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     /* About */
@@ -381,6 +398,8 @@
       .btn { padding: 0.85rem 1.8rem; font-size: 1rem; }
       .fleet-grid { gap: 1.5rem; }
       .card img { height: 160px; }
+      .logo { font-size: 1.2rem; }
+      .email { font-size: 0.7rem; }
     }
   </style>
 </head>
@@ -388,7 +407,10 @@
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <a href="#" class="logo">K-Rent <span>Sierra Leone</span></a>
+    <div class="logo-container">
+      <a href="#" class="logo">K-Rent <span>Sierra Leone</span></a>
+      <a href="mailto:kt@krent.sl" class="email">kt@krent.sl</a>
+    </div>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
@@ -415,8 +437,9 @@
     <p class="section-subtitle">Premium heavy machinery ready for your toughest projects</p>
 
     <div class="fleet-grid">
+      <!-- CAT 320D (без Coming Soon) -->
       <div class="card">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1690232608202-e4b53fa40245?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=85" alt="Caterpillar 320D Excavator">
+        <img loading="lazy" src="img/cat.jpg" alt="Caterpillar 320D Excavator">
         <div class="card-content">
           <h3>CAT 320D Excavator</h3>
           <ul>
@@ -428,9 +451,9 @@
         </div>
       </div>
 
+      <!-- Other Excavators -->
       <div class="card">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1649807533255-bbc9c9fb7d77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=85" alt="Excavator">
-        <span class="badge">Coming Soon</span>
+        <img loading="lazy" src="img/exc.jpg" alt="Excavator">
         <div class="card-content">
           <h3>Other Excavators</h3>
           <ul>
@@ -439,12 +462,13 @@
             <li>Low-noise cabins</li>
             <li>Telematics systems</li>
           </ul>
+          <div class="coming-soon">Coming Soon</div>
         </div>
       </div>
 
+      <!-- Bulldozers -->
       <div class="card">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1640917740290-04de0397a3a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=85" alt="Bulldozer">
-        <span class="badge">Coming Soon</span>
+        <img loading="lazy" src="img/b2.jpg" alt="Bulldozer">
         <div class="card-content">
           <h3>Bulldozers</h3>
           <ul>
@@ -453,12 +477,13 @@
             <li>Heavy-duty undercarriage</li>
             <li>Excellent stability</li>
           </ul>
+          <div class="coming-soon">Coming Soon</div>
         </div>
       </div>
 
+      <!-- Wheel Loaders -->
       <div class="card">
-        <img loading="lazy" src="https://izhco.ru/upload/medialibrary/031/bvl7qcblopo8jkg4sksnehqu7xo96f3m.png" alt="Wheel Loader">
-        <span class="badge">Coming Soon</span>
+        <img loading="lazy" src="img/tr.png" alt="Wheel Loader">
         <div class="card-content">
           <h3>Wheel Loaders</h3>
           <ul>
@@ -467,6 +492,7 @@
             <li>Low fuel consumption</li>
             <li>Ergonomic design</li>
           </ul>
+          <div class="coming-soon">Coming Soon</div>
         </div>
       </div>
     </div>
