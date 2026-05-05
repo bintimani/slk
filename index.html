@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>K-Rent Sierra Leone – Heavy Equipment Rental</title>
-  <meta name="description" content="Reliable heavy equipment rental in Sierra Leone: excavators, bulldozers, wheel loaders."/>
-
+  
+  <title>K-Rent Sierra Leone | Heavy Equipment Rental Freetown | Excavators & Bulldozers</title>
+  <meta name="description" content="K-Rent Sierra Leone offers reliable excavator, bulldozer & heavy equipment rental in Freetown. Fast quotes, modern machinery. Contact via Instagram @sierraleonebuild or email."/>
+  <meta name="keywords" content="equipment rental Sierra Leone, excavator rental Freetown, bulldozer hire, construction machinery, CAT excavator, heavy equipment lease"/>
+  
+  <link rel="canonical" href="https://krent.sl/"/>
+  <meta name="robots" content="index, follow"/>
+  
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://krent.sl/"/>
+  <meta property="og:title" content="K-Rent Sierra Leone | Heavy Equipment Rental Freetown"/>
+  <meta property="og:description" content="Reliable excavators, bulldozers & construction machinery rental. Contact @sierraleonebuild on Instagram."/>
+  <meta property="og:image" content="https://krent.sl/img/exc.jpg"/>
+  <meta property="og:site_name" content="K-Rent Sierra Leone"/>
+  <meta property="og:locale" content="en_SL"/>
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="K-Rent Sierra Leone | Equipment Rental"/>
+  <meta name="twitter:description" content="Heavy equipment rental in Freetown, Sierra Leone. Instagram: @sierraleonebuild"/>
+  <meta name="twitter:image" content="https://krent.sl/img/exc.jpg"/>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +39,6 @@
       --transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    /* ПРАВКА 1: Масштаб уменьшен для ноутбуков */
     html {
       font-size: 14px;
       scroll-behavior: smooth;
@@ -37,7 +54,22 @@
       overflow-x: hidden;
     }
 
-    /* ── Navbar ── */
+    .legal-topbar {
+      background: var(--clr-dark);
+      color: rgba(255,255,255,0.95);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 6px 0;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .legal-topbar strong {
+      color: var(--clr-green);
+      font-weight: 600;
+    }
+
     .navbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       padding: 1rem 5vw; display: flex; justify-content: space-between; align-items: center;
@@ -67,26 +99,44 @@
     .navbar.scrolled .nav-links a, .navbar.scrolled .logo, .navbar.scrolled .top-contact a { color: var(--clr-dark); }
     .navbar.scrolled .logo span { color: var(--clr-green); }
 
-    /* ── Hero ── */
     .hero {
       height: 65vh; min-height: 500px;
       background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%),
-                  url('img/exc.jpg') center/cover no-repeat; /* ГЛАВНОЕ ФОТО */
+                  url('img/exc.jpg') center/cover no-repeat;
       display: flex; align-items: center; justify-content: center; text-align: center; color: white;
     }
 
     .hero h1 { font-size: clamp(2.4rem, 6vw, 3.5rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.1; }
+    .hero p { font-size: 1.1rem; margin-bottom: 1.5rem; opacity: 0.95; max-width: 600px; margin-left: auto; margin-right: auto; }
     .btn {
       display: inline-block; padding: 0.8rem 2rem; background: var(--clr-green); color: white;
       font-weight: 600; text-decoration: none; border-radius: 50px; transition: var(--transition);
     }
+    .btn:hover { background: #007a39; transform: translateY(-2px); }
 
-    /* ── Fleet ── */
+    .instagram-cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+    }
+    .instagram-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+    }
+
     section { padding: 5rem 5vw; }
+    .section-title { text-align:center; margin-bottom:3rem; font-size:2rem; }
     .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1300px; margin: 0 auto; }
     
     .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); transition: var(--transition); }
-    .card:hover { transform: translateY(-8px); }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
     .card img { width: 100%; height: 200px; object-fit: cover; }
     .card-content { padding: 1.5rem; position: relative; }
     .card h3 { margin-bottom: 0.8rem; font-size: 1.25rem; }
@@ -95,24 +145,44 @@
 
     .coming-soon { font-size: 0.7rem; color: #999; text-transform: uppercase; margin-top: 10px; display: block; }
 
-    /* ── Footer ── */
     footer { background: var(--clr-dark); color: white; text-align: center; padding: 4rem 5vw; }
     .footer-info { margin-bottom: 20px; }
-    .footer-info p { margin: 5px 0; opacity: 0.8; }
-    .insta-link { color: var(--clr-green); text-decoration: none; font-weight: 600; }
+    .footer-info p { margin: 5px 0; opacity: 0.9; }
+    .insta-link { 
+      color: var(--clr-green); 
+      text-decoration: none; 
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .legal-disclosure {
+      opacity: 0.8; font-size: 0.8rem; margin-top: 20px; line-height: 1.5;
+    }
+    .legal-disclosure strong {
+      color: var(--clr-green);
+      font-size: 0.95rem;
+    }
+    .copyright {
+      opacity: 0.5; font-size: 0.7rem; margin-top: 25px;
+    }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      .legal-topbar { font-size: 0.65rem; padding: 5px 0; }
     }
   </style>
 </head>
 <body>
 
+  <div class="legal-topbar">
+    <strong>2026 Konstantines Consulting Services Limited LLC</strong> | Freetown, Sierra Leone
+  </div>
+
   <nav class="navbar" id="navbar">
     <div class="logo-container">
       <div style="display: flex; align-items: center; gap: 0.8rem;">
         <a href="#" class="logo">K-Rent <span>Sierra Leone</span></a>
-        <img src="img/sl.png" alt="Sierra Leone" class="flag-icon"> </div>
+        <img src="img/sl.png" alt="Sierra Leone" class="flag-icon">
+      </div>
       <div class="top-contact">
         <a href="mailto:kt@krent.sl">kt@krent.sl</a>
       </div>
@@ -120,72 +190,114 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#fleet">Fleet</a></li>
-      <li><a href="https://instagram.com/sierraleonebuild" target="_blank">Instagram</a></li>
+      <li><a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener">Instagram</a></li>
     </ul>
   </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Heavy Equipment Rental<br>in Sierra Leone</h1>
-      <p>Reliable excavators, bulldozers & construction machinery</p>
-      <a href="mailto:kt@krent.sl" class="btn">Get a Quote</a>
-    </div>
-  </section>
-
-  <section id="fleet">
-    <h2 style="text-align:center; margin-bottom:3rem; font-size:2rem;">Our Fleet</h2>
-    <div class="fleet-grid">
-      <div class="card">
-        <img src="img/exc2.jpg" alt="CAT Excavator">
-        <div class="card-content">
-          <h3>CAT 320D Excavator</h3>
-          <ul>
-            <li>160 hp Cat C4.4 engine</li>
-            <li>20.7 t operating weight</li>
-            <li>6.7 m max dig depth</li>
-          </ul>
-        </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Heavy Equipment Rental<br>in Sierra Leone</h1>
+        <p>Reliable excavators, bulldozers & construction machinery for projects across Freetown and beyond</p>
+        <a href="mailto:kt@krent.sl" class="btn">Get a Quote</a>
+        <br>
+        <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="instagram-cta">
+          📸 Follow @sierraleonebuild
+        </a>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="img/b1.jpg" alt="Bulldozer">
-        <div class="card-content">
-          <h3>Bulldozers</h3>
-          <p>Heavy-duty site preparation</p>
-          <span class="coming-soon">Coming Soon</span>
-        </div>
-      </div>
+    <section id="fleet">
+      <h2 class="section-title">Our Fleet</h2>
+      <div class="fleet-grid">
+        <article class="card">
+          <img src="img/exc2.jpg" alt="CAT Excavator">
+          <div class="card-content">
+            <h3>CAT 320D Excavator</h3>
+            <ul>
+              <li>160 hp Cat C4.4 engine</li>
+              <li>20.7 t operating weight</li>
+              <li>6.7 m max dig depth</li>
+            </ul>
+          </div>
+        </article>
 
-      <div class="card">
-        <img src="img/b2.jpg" alt="Bulldozer">
-        <div class="card-content">
-          <h3>Earthmoving Fleet</h3>
-          <p>Powerful track dozers</p>
-          <span class="coming-soon">Coming Soon</span>
-        </div>
-      </div>
+        <article class="card">
+          <img src="img/b1.jpg" alt="Bulldozer">
+          <div class="card-content">
+            <h3>Bulldozers</h3>
+            <p>Heavy-duty site preparation</p>
+            <span class="coming-soon">Coming Soon</span>
+          </div>
+        </article>
 
-      <div class="card">
-        <img src="img/tr.png" alt="Truck">
-        <div class="card-content">
-          <h3>Logistics & Transport</h3>
-          <p>Heavy material hauling</p>
-          <span class="coming-soon">Coming Soon</span>
-        </div>
+        <article class="card">
+          <img src="img/b2.jpg" alt="Bulldozer">
+          <div class="card-content">
+            <h3>Earthmoving Fleet</h3>
+            <p>Powerful track dozers</p>
+            <span class="coming-soon">Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/tr.png" alt="Truck">
+          <div class="card-content">
+            <h3>Logistics & Transport</h3>
+            <p>Heavy material hauling</p>
+            <span class="coming-soon">Coming Soon</span>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-info">
       <p><strong>K-Rent Sierra Leone</strong></p>
       <p>Freetown, Sierra Leone 🇸🇱</p>
-      <p style="margin-top: 15px;">
-        <a href="https://instagram.com/sierraleonebuild" class="insta-link" target="_blank">Instagram: @sierraleonebuild</a>
+      <p style="margin-top: 18px; font-size: 1.05rem;">
+        <a href="https://instagram.com/sierraleonebuild" class="insta-link" target="_blank" rel="noopener">
+          📷 Instagram: @sierraleonebuild
+        </a>
+      </p>
+      <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.85;">
+        Primary contact for equipment inquiries
+      </p>
+      <p class="legal-disclosure">
+        K-Rent Sierra Leone is a trading name of<br>
+        <strong>2026 Konstantines Consulting Services Limited LLC</strong>,<br>
+        Freetown, Sierra Leone.
       </p>
     </div>
-    <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 30px;">© 2026 Fortis Engineering Group</p>
+    <p class="copyright">
+      &copy; 2026 Konstantines Consulting Services Limited LLC. All rights reserved.
+    </p>
   </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "K-Rent Sierra Leone",
+    "legalName": "2026 Konstantines Consulting Services Limited LLC",
+    "image": "https://krent.sl/img/exc.jpg",
+    "email": "kt@krent.sl",
+    "url": "https://krent.sl",
+    "sameAs": [
+      "https://instagram.com/sierraleonebuild"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Freetown",
+      "addressCountry": "SL"
+    },
+    "areaServed": "SL",
+    "makesOffer": "https://krent.sl/#fleet",
+    "priceRange": "$$",
+    "availableLanguage": ["English"]
+  }
+  </script>
 
   <script>
     window.addEventListener('scroll', () => {
