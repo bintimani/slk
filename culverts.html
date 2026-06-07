@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Culverts & Small Bridges Sierra Leone | K-Rent Construction</title>
+  <meta name="description" content="Culvert construction and small bridge building in Sierra Leone. Box culverts, pipe culverts, drainage crossings and footbridges across Freetown. Contact @sierraleonebuild."/>
+  <meta name="keywords" content="culvert construction Sierra Leone, small bridge Freetown, box culvert, drainage crossing, road drainage Sierra Leone"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://krent.sl/culverts.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://krent.sl/culverts.html"/>
+  <meta property="og:title" content="Culverts & Small Bridges | K-Rent Sierra Leone"/>
+  <meta property="og:description" content="Drainage crossings, box culverts and small bridges built across Sierra Leone."/>
+  <meta property="og:image" content="https://krent.sl/img/hero-culvert.jpg"/>
+  <meta property="og:locale" content="en_SL"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #009b48;
+      --green-dark: #007a39;
+      --dark: #0d1a26;
+      --gray: #f4f5f7;
+      --text: #1a2b3c;
+      --muted: #64748b;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Satoshi', system-ui, sans-serif; color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      background: #0a1520;
+      padding: 10px 5vw;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a, .breadcrumb span { font-size: 0.78rem; color: rgba(255,255,255,0.4); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--green); }
+    .breadcrumb .sep { color: rgba(255,255,255,0.18); }
+    .breadcrumb .active { color: rgba(255,255,255,0.8); }
+
+    /* HERO — slim strip, no image */
+    .hero {
+      background: var(--dark);
+      padding: 1rem 5vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .hero h1 {
+      font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0.55rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      min-height: 38px;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-insta {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+    }
+    .btn-insta:hover { opacity: 0.88; }
+    .btn-cta {
+      background: #fff;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 2rem;
+      min-height: 52px;
+    }
+    .btn-cta:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.18); transform: translateY(-2px); }
+    .btn-cta-insta {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.85rem 2rem;
+      min-height: 52px;
+    }
+    .btn-cta-insta:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* SERVICES */
+    .services {
+      padding: 2.5rem 5vw 3rem;
+      background: var(--gray);
+    }
+    .services-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .services h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1.75rem;
+      color: var(--text);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+      max-width: 1100px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .card-img img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-img .placeholder {
+      width: 100%;
+      height: 220px;
+      background: #c5d5c5;
+    }
+    .card-body {
+      padding: 1.4rem 1.4rem 1.6rem;
+      flex: 1;
+    }
+    .card-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    .card-body p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* WHY */
+    .why { background: var(--dark); padding: 3rem 5vw; }
+    .why-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      align-items: center;
+    }
+    .why img {
+      width: 100%; height: 220px;
+      object-fit: cover; border-radius: 12px;
+    }
+    .why-label {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #4fc87a;
+      display: block; margin-bottom: 0.5rem;
+    }
+    .why h2 {
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      font-weight: 700; color: #fff; margin-bottom: 0.9rem;
+    }
+    .why p {
+      font-size: 0.95rem; color: rgba(255,255,255,0.65);
+      line-height: 1.7; margin-bottom: 0.8rem;
+    }
+    .why p:last-child { margin-bottom: 0; }
+    .why strong { color: var(--green); }
+
+    /* CTA */
+    .cta {
+      background: var(--green);
+      padding: 4rem 5vw;
+      text-align: center;
+    }
+    .cta h2 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .cta p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    /* FOOTER */
+    .foot {
+      background: var(--dark);
+      padding: 1.1rem 5vw;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      text-align: center;
+    }
+    .foot a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.8rem; }
+    .foot a:hover { color: var(--green); }
+    .foot small { color: rgba(255,255,255,0.18); font-size: 0.7rem; }
+
+    /* MOBILE — cards go single column below 500px */
+    @media (max-width: 500px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* DESKTOP */
+    @media (min-width: 900px) {
+      .why-inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+      .why img { height: 300px; }
+      .foot { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="index.html">K-Rent Sierra Leone</a>
+    <span class="sep">/</span>
+    <a href="index.html#construction">Construction</a>
+    <span class="sep">/</span>
+    <span class="active">Culverts &amp; Small Bridges</span>
+  </div>
+
+  <!-- SLIM HERO STRIP -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="tag">Construction Services</div>
+      <h1>Culverts &amp; Small Bridges — Sierra Leone</h1>
+    </div>
+    <div class="hero-actions">
+      <a href="mailto:kt@krent.sl" class="btn btn-primary">Get a Quote</a>
+      <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="btn btn-insta">&#128247; @sierraleonebuild</a>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services">
+    <span class="services-label">What We Build</span>
+    <h2>Four Types of Work</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="img/culvert-box.jpg" alt="Box culvert construction" onerror="this.outerHTML='<div class=placeholder></div>'" />
+        </div>
+        <div class="card-body">
+          <h3>Box Culverts</h3>
+          <p>Reinforced concrete box sections for high-load road crossings. Built to handle heavy vehicles and peak rainy season water flow.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="img/culvert-pipe.jpg" alt="Pipe culvert drainage" onerror="this.outerHTML='<div class=placeholder></div>'" />
+        </div>
+        <div class="card-body">
+          <h3>Pipe Culverts</h3>
+          <p>Concrete or metal pipe for smaller drainage channels. Fast to install and cost-effective for farm tracks and residential roads.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="img/culvert-bridge.jpg" alt="Small footbridge Sierra Leone" onerror="this.outerHTML='<div class=placeholder></div>'" />
+        </div>
+        <div class="card-body">
+          <h3>Small Footbridges</h3>
+          <p>Concrete or steel-reinforced bridges up to ~10 metres. Connecting communities cut off by streams every rainy season.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="img/culvert-drainage.jpg" alt="Drainage headwall and channel" onerror="this.outerHTML='<div class=placeholder></div>'" />
+        </div>
+        <div class="card-body">
+          <h3>Drainage &amp; Headwalls</h3>
+          <p>Inlet and outlet headwalls, wing walls, and channel lining to stop erosion and protect the culvert long-term.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="why">
+    <div class="why-inner">
+      <img src="img/culvert-why.jpg" alt="Flooded road Sierra Leone rainy season" onerror="this.style.background='#1a3a2a'; this.removeAttribute('src');" />
+      <div>
+        <span class="why-label">Why It Matters</span>
+        <h2>Sierra Leone's drainage problem is everywhere</h2>
+        <p><strong>Over 88% of Sierra Leone's roads remain unpaved.</strong> Every rainy season, streams cut off communities, destroy road surfaces, and damage property — not because the rain is unusual, but because the drainage was never built.</p>
+        <p>Done properly, a culvert lasts decades and keeps access open year-round. <strong>Skip it, and you're rebuilding the road every year.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Ready to get it built?</h2>
+    <p>We cover Freetown and surrounding districts.<br>Contact us for a site visit and quote.</p>
+    <div class="cta-actions">
+      <a href="mailto:kt@krent.sl" class="btn btn-cta">&#9993;&nbsp; kt@krent.sl</a>
+      <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="btn btn-cta-insta">&#128247; @sierraleonebuild</a>
+    </div>
+  </div>
+
+  <div class="foot">
+    <a href="index.html">&#8592; Back to K-Rent Sierra Leone</a>
+    <small>&copy; 2026 Konstantines Consulting Services Limited LLC</small>
+  </div>
+
+</body>
+</html>
