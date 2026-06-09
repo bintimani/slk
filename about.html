@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>About Us | K-Rent Sierra Leone | Corporate Vision & Partnership</title>
+  <meta name="description" content="Learn more about K-Rent's mission, our international construction track record, and strategic partnership opportunities in Sierra Leone."/>
+  
+  <link rel="canonical" href="https://krent.sl/about.html"/>
+  <meta name="robots" content="index, follow"/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --clr-green: #009b48;
+      --clr-blue:  #0072c6;
+      --clr-white: #ffffff;
+      --clr-dark:  #0d1a26;
+      --clr-gray:  #f8f9fa;
+      --clr-text:  #1a2b3c;
+      --transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html {
+      font-size: 14px;
+      scroll-behavior: smooth;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
+      background: var(--clr-gray);
+      color: var(--clr-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .legal-topbar {
+      background: var(--clr-dark);
+      color: rgba(255,255,255,0.95);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 6px 0;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .legal-topbar strong {
+      color: var(--clr-green);
+      font-weight: 600;
+    }
+
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1rem 5vw; display: flex; justify-content: space-between; align-items: center;
+      transition: var(--transition); background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .logo-container { display: flex; align-items: center; gap: 0.8rem; }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--clr-dark); text-decoration: none; }
+    .logo span { color: var(--clr-green); }
+
+    .flag-icon {
+      width: 48px; height: 49px; object-fit: contain;
+      border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .top-contact { font-size: 0.8rem; display: flex; flex-direction: column; gap: 2px; }
+    .top-contact a { color: var(--clr-dark); text-decoration: none; opacity: 0.9; }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--clr-dark); text-decoration: none; font-weight: 500; font-size: 1rem; transition: var(--transition); }
+    .nav-links a:hover { color: var(--clr-blue); }
+
+    .page-header {
+      margin-top: 110px;
+      padding: 4rem 5vw 2rem;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--clr-dark);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .mission-statement {
+      font-size: 1.25rem;
+      color: var(--clr-blue);
+      font-weight: 500;
+      max-width: 800px;
+      border-left: 4px solid var(--clr-green);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0 3rem 0;
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 5vw 5rem;
+    }
+
+    .text-side h2 {
+      font-size: 1.8rem;
+      color: var(--clr-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .text-side p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      color: #334155;
+      text-align: justify;
+    }
+
+    .partnership-box {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+      border-top: 4px solid var(--clr-green);
+      margin-top: 3rem;
+    }
+
+    .partnership-box h3 {
+      font-size: 1.4rem;
+      color: var(--clr-dark);
+      margin-bottom: 1rem;
+    }
+
+    .visual-side {
+      position: sticky;
+      top: 140px;
+      height: fit-content;
+    }
+
+    .image-container {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      background: #e2e8f0;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-email {
+      display: inline-block; padding: 0.8rem 2rem; background: var(--clr-blue); color: white;
+      font-weight: 600; text-decoration: none; border-radius: 50px; transition: var(--transition);
+    }
+    .btn-email:hover { background: #005696; transform: translateY(-2px); }
+
+    .instagram-cta {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+    .instagram-cta:hover { transform: translateY(-2px); }
+
+    footer { background: var(--clr-dark); color: white; text-align: center; padding: 4rem 5vw; }
+    .footer-info { margin-bottom: 20px; }
+    .footer-info p { margin: 5px 0; opacity: 0.9; }
+    .insta-link { color: var(--clr-green); text-decoration: none; font-weight: 700; font-size: 1.05rem; }
+    .legal-disclosure { opacity: 0.8; font-size: 0.8rem; margin-top: 20px; line-height: 1.5; }
+    .legal-disclosure strong { color: var(--clr-green); font-size: 0.95rem; }
+    .copyright { opacity: 0.5; font-size: 0.7rem; margin-top: 25px; }
+
+    @media (max-width: 992px) {
+      .content-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .visual-side { position: relative; top: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .legal-topbar { font-size: 0.65rem; padding: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="legal-topbar">
+    <strong>2026 Konstantines Consulting Services Limited LLC</strong> | Freetown, Sierra Leone
+  </div>
+
+  <nav class="navbar">
+    <div class="logo-container">
+      <div style="display: flex; align-items: center; gap: 0.8rem;">
+        <a href="index.html" class="logo">K-Rent <span>Sierra Leone</span></a>
+        <img src="img/sl.png" alt="Sierra Leone" class="flag-icon">
+      </div>
+      <div class="top-contact">
+        <a href="mailto:kt@krent.sl">kt@krent.sl</a>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#fleet">Fleet</a></li>
+      <li><a href="index.html#construction">Construction</a></li>
+      <li><a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <h1>Our Mission</h1>
+      <p class="mission-statement">
+        Our mission is to drive the sustainable development of Sierra Leone by combining international construction expertise with the reliable machinery needed to build its future.
+      </p>
+    </header>
+
+    <div class="content-layout">
+      <div class="text-side">
+        <h2>About Krent</h2>
+        <p>Krent is a forward-thinking construction services firm dedicated to driving the development of Sierra Leone. We believe in the country's future and are actively investing our resources and expertise into the infrastructure required to fuel its growth.</p>
+        <p>We bring a wealth of international experience to the local market, with a proven track record of successfully executing diverse projects overseas—ranging from complex drainage systems, culverts, and small bridges to premium villas, cottages, and residential buildings.</p>
+        <p>By combining this global expertise with a reliable fleet of heavy machinery, Krent provides the foundational equipment and technical capability needed to build Sierra Leone’s future.</p>
+
+        <div class="partnership-box">
+          <h3>Build With Us</h3>
+          <p>We believe that the future of Sierra Leone is built on collaboration. Whether you are a local landowner, a project developer, or a contractor looking for a reliable technical partner, we are open to exploring strategic opportunities together.</p>
+          <p>Let's discuss how our international experience and machinery can support your vision. Reach out to us directly to start the conversation.</p>
+          
+          <div class="contact-buttons">
+            <a href="mailto:kt@krent.sl" class="btn-email">Email Us</a>
+            <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="instagram-cta">@sierraleonebuild</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual-side">
+        <div class="image-container">
+          <img src="img/about.jpg" alt="Krent Construction and Development Sierra Leone" onerror="this.parentNode.style.padding='100px 20px'; this.parentNode.style.textAlign='center'; this.parentNode.innerHTML='About Image Placeholder';">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>K-Rent Sierra Leone</strong></p>
+      <p>Freetown, Sierra Leone 🇸🇱</p>
+      <p style="margin-top: 18px; font-size: 1.05rem;">
+        <a href="https://instagram.com/sierraleonebuild" class="insta-link" target="_blank" rel="noopener">
+          📷 Instagram: @sierraleonebuild
+        </a>
+      </p>
+      <p class="legal-disclosure">
+        K-Rent Sierra Leone is a trading name of<br>
+        <strong>2026 Konstantines Consulting Services Limited LLC</strong>,<br>
+        Freetown, Sierra Leone.
+      </p>
+    </div>
+    <p class="copyright">
+      &copy; 2026 Konstantines Consulting Services Limited LLC. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
