@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+
   <title>K-Rent Sierra Leone | Heavy Equipment Rental Freetown | Excavators & Bulldozers</title>
   <meta name="description" content="K-Rent Sierra Leone — heavy equipment rental and construction services in Freetown. Excavators, bulldozers, culverts, concrete works. Fast quotes via Instagram @sierraleonebuild or email."/>
   <meta name="keywords" content="equipment rental Sierra Leone, excavator rental Freetown, bulldozer hire, construction machinery, CAT excavator, heavy equipment lease, culvert construction Sierra Leone, concrete works Freetown, small bridge Sierra Leone, construction services Sierra Leone"/>
-  
+
   <link rel="canonical" href="https://krent.sl/"/>
+  <link rel="alternate" hreflang="en" href="https://krent.sl/"/>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+  <link rel="icon" href="/favicon.ico" sizes="any"/>
+  <link rel="shortcut icon" href="/favicon.ico"/>
   <meta name="robots" content="index, follow"/>
-  
+  <meta name="theme-color" content="#0b2942"/>
+
+  <!-- Local SEO / geo hints -->
+  <meta name="geo.region" content="SL"/>
+  <meta name="geo.placename" content="Freetown"/>
+  <meta name="ICBM" content="8.4657, -13.2317"/>
+
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://krent.sl/"/>
   <meta property="og:title" content="K-Rent Sierra Leone | Equipment Rental & Construction Services Freetown"/>
@@ -18,202 +28,402 @@
   <meta property="og:image" content="https://krent.sl/img/exc.jpg"/>
   <meta property="og:site_name" content="K-Rent Sierra Leone"/>
   <meta property="og:locale" content="en_SL"/>
-  
+
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="K-Rent Sierra Leone | Equipment Rental"/>
   <meta name="twitter:description" content="Heavy equipment rental in Freetown, Sierra Leone. Instagram: @sierraleonebuild"/>
   <meta name="twitter:image" content="https://krent.sl/img/exc.jpg"/>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --clr-green: #009b48;
-      --clr-blue:  #0072c6;
-      --clr-white: #ffffff;
-      --clr-dark:  #0d1a26;
-      --clr-gray:  #f8f9fa;
-      --clr-text:  #1a2b3c;
-      --transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      /* Sierra Leone palette, re-weighted: deep marine navy carries the dark surfaces,
+         forest green is the single accent color (CTAs, badges, highlights),
+         a lighter marine blue backs it up as a secondary accent (links). Never two
+         saturated colors sitting next to each other at the same weight — that's what
+         caused the clash before. White stays as the paper/background family. */
+      --navy:          #0b2942;
+      --navy-soft:     #123a5c;
+      --steel:         #5b6570;
+      --paper:         #f5f6f5;
+      --white:         #ffffff;
+      --green:         #1c7a4a;
+      --green-deep:    #145c38;
+      --blue:          #2f7fb0;
+      --ink:           #1c2024;
+      --line:          rgba(11,41,66,0.10);
+      --line-on-dark:  rgba(255,255,255,0.12);
+      --shadow: 0 20px 48px rgba(11,41,66,0.16);
+      --transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      --header-h: 96px;
     }
 
-    html {
-      font-size: 14px;
-      scroll-behavior: smooth;
-    }
-
+    html { font-size: 16px; scroll-behavior: smooth; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+
     body {
-      font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
-      background: var(--clr-gray);
-      color: var(--clr-text);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    .legal-topbar {
-      background: var(--clr-dark);
-      color: rgba(255,255,255,0.95);
-      font-size: 0.75rem;
-      text-align: center;
-      padding: 6px 0;
-      letter-spacing: 0.4px;
-      font-weight: 500;
-      line-height: 1.4;
+    img { display: block; max-width: 100%; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; flex-direction: column;
     }
 
-    .legal-topbar strong {
-      color: var(--clr-green);
-      font-weight: 600;
+    .legal-topbar {
+      background: var(--navy);
+      color: rgba(255,255,255,0.68);
+      font-size: 0.76rem;
+      padding: 7px 5vw;
+      letter-spacing: 0.2px;
+      font-weight: 300;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
+    .legal-topbar strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+    .legal-topbar .topbar-contact { opacity: 0.65; font-size: 0.72rem; white-space: nowrap; color: rgba(255,255,255,0.65); text-decoration: none; }
+    .legal-topbar .topbar-contact:hover { opacity: 1; color: var(--green); }
 
     .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      padding: 1rem 5vw; display: flex; justify-content: space-between; align-items: center;
+      position: relative; z-index: 1000;
+      padding: 1.1rem 5vw; display: flex; justify-content: space-between; align-items: center;
       transition: var(--transition); background: transparent;
     }
-
     .navbar.scrolled {
-      background: rgba(255,255,255,0.97);
+      background: rgba(245,246,245,0.96);
       backdrop-filter: blur(16px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 24px rgba(11,41,66,0.08);
+      border-bottom: 1px solid var(--line);
     }
 
-    .logo-container { display: flex; align-items: center; gap: 0.8rem; }
-    .logo { font-size: 1.3rem; font-weight: 700; color: var(--clr-blue); text-decoration: none; }
-    .logo span { color: var(--clr-green); }
+    .logo-container { display: flex; align-items: center; gap: 0.9rem; }
+    .logo { font-size: 1.35rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: -0.01em; }
+    .logo span { color: var(--green); font-weight: 600; }
+    .navbar.scrolled .logo { color: var(--ink); }
 
     .flag-icon {
-      width: 48px; height: 49px; object-fit: contain;
-      border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 40px; height: 41px; object-fit: contain;
+      border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-    .top-contact { font-size: 0.8rem; color: white; text-decoration: none; display: flex; flex-direction: column; gap: 2px; }
-    .top-contact a { color: white; text-decoration: none; opacity: 0.9; }
+    .top-contact { font-size: 0.82rem; }
+    .top-contact a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .navbar.scrolled .top-contact a { color: var(--steel); }
+    .top-contact a:hover { color: var(--green); }
 
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 1rem; transition: var(--transition); }
-    .navbar.scrolled .nav-links a, .navbar.scrolled .logo, .navbar.scrolled .top-contact a { color: var(--clr-dark); }
-    .navbar.scrolled .logo span { color: var(--clr-green); }
-
-    .hero {
-      height: 65vh; min-height: 500px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%),
-                  url('img/exc.jpg') center/cover no-repeat;
-      display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-    }
-
-    .hero h1 { font-size: clamp(2.4rem, 6vw, 3.5rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.1; }
-    .hero p { font-size: 1.1rem; margin-bottom: 1.5rem; opacity: 0.95; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .btn {
-      display: inline-block; padding: 0.8rem 2rem; background: var(--clr-green); color: white;
-      font-weight: 600; text-decoration: none; border-radius: 50px; transition: var(--transition);
-    }
-    .btn:hover { background: #007a39; transform: translateY(-2px); }
-
-    .instagram-cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.5rem;
-      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 50px;
+    .nav-links { display: flex; align-items: center; gap: 2.1rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; font-size: 0.95rem;
       transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
     }
-    .instagram-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+    .navbar.scrolled .nav-links a { color: var(--ink); }
+    .nav-links a:hover { color: var(--green); }
+    .nav-links .nav-cta {
+      background: var(--green); color: var(--white) !important; padding: 0.45rem 1.1rem;
+      border-radius: 50px; font-weight: 700; font-size: 0.85rem;
+    }
+    .nav-links .nav-cta:hover { background: var(--green-deep); }
+
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      width: 40px; height: 40px; padding: 0; position: relative; z-index: 1001;
+    }
+    .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+      content: ''; position: absolute; left: 9px; width: 22px; height: 2px;
+      background: white; border-radius: 2px; transition: var(--transition);
+    }
+    .navbar.scrolled .nav-toggle span,
+    .navbar.scrolled .nav-toggle span::before,
+    .navbar.scrolled .nav-toggle span::after { background: var(--ink); }
+    .nav-toggle span { top: 19px; }
+    .nav-toggle span::before { content: ''; top: -7px; }
+    .nav-toggle span::after { content: ''; top: 7px; }
+    .nav-toggle.open span { background: transparent; }
+    .nav-toggle.open span::before { top: 0; transform: rotate(45deg); background: white; }
+    .nav-toggle.open span::after { top: 0; transform: rotate(-45deg); background: white; }
+    .navbar.scrolled .nav-toggle.open span::before,
+    .navbar.scrolled .nav-toggle.open span::after { background: var(--ink); }
+
+    /* HERO */
+    .hero {
+      min-height: 92vh;
+      display: flex; align-items: flex-end; justify-content: flex-start;
+      background:
+        linear-gradient(180deg, rgba(11,41,66,0.40) 0%, rgba(11,41,66,0.55) 55%, rgba(11,41,66,0.94) 100%),
+        url('img/exc.jpg') center/cover no-repeat;
+      color: white;
+      padding: calc(var(--header-h) + 2rem) 5vw 4.5rem;
+    }
+    #home, #fleet, #construction { scroll-margin-top: var(--header-h); }
+    .hero-content { max-width: 760px; }
+    .hero-kicker {
+      display: inline-block; font-size: 0.92rem; font-weight: 600; color: var(--green);
+      margin-bottom: 1.1rem; letter-spacing: 0.01em;
+    }
+    .hero h1 {
+      font-size: clamp(2.25rem, 4.8vw, 3.6rem); font-weight: 800; line-height: 1.08;
+      margin-bottom: 1.3rem; letter-spacing: -0.02em;
+    }
+    .hero p {
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem); font-weight: 400; opacity: 0.92;
+      max-width: 560px; margin-bottom: 2.1rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.6rem; font-weight: 700; font-size: 0.9rem;
+      text-decoration: none; border-radius: 50px; transition: var(--transition);
+      border: 1.5px solid transparent;
+    }
+    .btn-sm { padding: 0.5rem 1.2rem; font-size: 0.8rem; gap: 0.4rem; }
+    .btn-primary { background: var(--green); color: white; box-shadow: 0 10px 22px rgba(28,122,74,0.32); }
+    .btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: white; border-color: rgba(255,255,255,0.45); }
+    .btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      background: var(--navy-soft);
+      padding: 1.6rem 5vw;
+      display: flex; flex-wrap: wrap; gap: 1.5rem 3rem;
+      justify-content: center;
+      border-bottom: 1px solid var(--line-on-dark);
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 0.65rem;
+      color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 500;
+    }
+    .trust-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+
+    section { padding: 6rem 5vw; }
+    .section-head { max-width: 640px; margin: 0 auto 3.2rem; text-align: center; }
+    .section-title { font-size: clamp(1.9rem, 3.6vw, 2.5rem); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 0.7rem; }
+    .section-sub { font-size: 1.08rem; color: var(--steel); line-height: 1.65; }
+
+    .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; max-width: 1300px; margin: 0 auto; }
+
+    .card {
+      background: white; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 10px 30px rgba(11,41,66,0.07); transition: var(--transition);
+      border: 1px solid var(--line);
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(11,41,66,0.12); }
+    .card-media { position: relative; }
+    .card img { width: 100%; height: 172px; object-fit: cover; }
+    .badge {
+      position: absolute; top: 14px; left: 14px;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(11,41,66,0.88); backdrop-filter: blur(6px);
+      color: white; font-size: 0.78rem; font-weight: 600;
+      padding: 0.4rem 0.85rem; border-radius: 50px;
+    }
+    .badge-live .trust-dot, .badge .trust-dot { background: var(--green); }
+    .badge-soon { background: rgba(245,246,245,0.9); color: var(--steel); }
+
+    .card-content { padding: 1.25rem 1.3rem 1.4rem; }
+    .card h3 { margin-bottom: 0.65rem; font-size: 1.12rem; font-weight: 700; }
+    .card ul { list-style: none; font-size: 0.9rem; color: var(--steel); }
+    .card li {
+      padding: 0.4rem 0; border-top: 1px solid var(--line);
+    }
+    .card li:first-child { border-top: none; padding-top: 0; }
+    .card p.muted { font-size: 0.9rem; color: var(--steel); margin-top: 0.1rem; }
+
+    .learn-more {
+      display: inline-block; margin-top: 0.85rem; font-size: 0.88rem; font-weight: 700;
+      color: var(--blue); text-decoration: none; border-bottom: 1.5px solid transparent;
+    }
+    .learn-more:hover { border-color: var(--blue); }
+
+    .procurement-note {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      max-width: 760px; margin: 2.8rem auto 0;
+      padding: 1.15rem 1.5rem;
+      background: rgba(28,122,74,0.07);
+      border: 1px solid rgba(28,122,74,0.2);
+      border-left: 4px solid var(--green);
+      border-radius: 12px;
+    }
+    .procurement-icon {
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+      background: var(--green); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem;
+    }
+    .procurement-note p { flex: 1; min-width: 220px; margin: 0; font-size: 0.98rem; color: var(--ink); line-height: 1.55; }
+    .procurement-note strong { color: var(--green-deep); }
+    .procurement-link {
+      flex-shrink: 0; font-size: 0.88rem; font-weight: 700; color: var(--green);
+      text-decoration: none; white-space: nowrap;
+    }
+    .procurement-link:hover { color: var(--green-deep); text-decoration: underline; }
+
+    /* CONSTRUCTION section on darker tint for rhythm */
+    #construction { background: var(--white); border-top: 1px solid var(--line); }
+
+    /* WHERE WE WORK / MAP */
+    .where-work {
+      background: var(--navy);
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 6rem 5vw;
+    }
+    .where-text .section-title { color: white; text-align: left; }
+    .where-text { max-width: 480px; }
+    .where-text p { color: rgba(255,255,255,0.72); font-size: 1.05rem; margin-bottom: 1.6rem; }
+    .where-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.8rem; }
+    .where-list li { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.85); font-size: 0.98rem; }
+    .map-frame {
+      border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+      border: 1px solid var(--line-on-dark); height: 340px;
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.15) contrast(1.03); }
+
+    @media (min-width: 900px) {
+      .where-work { grid-template-columns: 1fr 1.15fr; text-align: left; }
     }
 
-    section { padding: 5rem 5vw; }
-    .section-title { text-align:center; margin-bottom:3rem; font-size:2rem; }
-    .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1300px; margin: 0 auto; }
-    
-    .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); transition: var(--transition); }
-    .card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card-content { padding: 1.5rem; position: relative; }
-    .card h3 { margin-bottom: 0.8rem; font-size: 1.25rem; }
-    .card ul { list-style: none; font-size: 0.95rem; color: #555; }
-    .card li::before { content: "•"; color: var(--clr-green); margin-right: 8px; }
+    footer { background: var(--navy); color: white; padding: 3.2rem 5vw 2.4rem; }
+    .footer-inner { max-width: 1300px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; }
+    .footer-line { font-size: 0.95rem; opacity: 0.9; }
+    .footer-line a { color: var(--green); text-decoration: none; font-weight: 600; }
+    .footer-line a:hover { color: white; }
+    .copyright { opacity: 0.55; font-size: 0.76rem; margin-top: 0.6rem; max-width: 620px; line-height: 1.6; }
+    .legal-links { margin-top: 0.4rem; font-size: 0.72rem; opacity: 0.4; }
+    .legal-links a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .legal-links a:hover { opacity: 1; color: var(--green); }
 
-    .coming-soon { font-size: 0.7rem; color: #999; text-transform: uppercase; margin-top: 10px; display: block; }
-
-    footer { background: var(--clr-dark); color: white; text-align: center; padding: 4rem 5vw; }
-    .footer-info { margin-bottom: 20px; }
-    .footer-info p { margin: 5px 0; opacity: 0.9; }
-    .insta-link { 
-      color: var(--clr-green); 
-      text-decoration: none; 
-      font-weight: 700;
-      font-size: 1.05rem;
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(11,41,66,0.55); backdrop-filter: blur(3px);
+      align-items: center; justify-content: center; padding: 6vw;
     }
-    .legal-disclosure {
-      opacity: 0.8; font-size: 0.8rem; margin-top: 20px; line-height: 1.5;
+    .modal-overlay:target { display: flex; }
+    .modal-box {
+      background: var(--white); color: var(--ink); border-radius: 14px;
+      max-width: 460px; width: 100%; max-height: 78vh; overflow-y: auto;
+      padding: 2rem 2rem 1.8rem; position: relative; box-shadow: var(--shadow);
     }
-    .legal-disclosure strong {
-      color: var(--clr-green);
-      font-size: 0.95rem;
+    .modal-box h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .modal-box p { font-size: 0.88rem; color: var(--steel); line-height: 1.65; margin-bottom: 0.9rem; }
+    .modal-box p:last-child { margin-bottom: 0; }
+    .modal-box a { color: var(--blue); }
+    .modal-close {
+      position: absolute; top: 0.9rem; right: 1rem; font-size: 1.4rem; line-height: 1;
+      color: var(--steel); text-decoration: none; padding: 0.2rem 0.5rem;
     }
-    .copyright {
-      opacity: 0.5; font-size: 0.7rem; margin-top: 25px;
-    }
+    .modal-close:hover { color: var(--ink); }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .legal-topbar { font-size: 0.65rem; padding: 5px 0; }
+      .nav-toggle { display: block; }
+      .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--navy);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.25s ease;
+        padding: 0 6vw;
+      }
+      .nav-links.open { max-height: 420px; opacity: 1; padding: 0.5rem 6vw 1.6rem; box-shadow: 0 16px 32px rgba(11,41,66,0.25); }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 0.85rem 0; border-bottom: 1px solid var(--line-on-dark); color: white; }
+      .navbar.scrolled .nav-links a { color: white; }
+      .nav-links .nav-cta { text-align: center; margin: 0.9rem 0 0.2rem; }
+
+      .hero { padding: calc(var(--header-h) + 1.5rem) 6vw 3rem; min-height: 78vh; }
+      section { padding: 4rem 6vw; }
+      .legal-topbar { font-size: 0.68rem; padding: 7px 6vw; justify-content: center; text-align: center; }
+      .legal-topbar .topbar-contact { font-size: 0.64rem; }
+      .trust-strip { padding: 1.3rem 6vw; justify-content: flex-start; gap: 1rem 2rem; }
+      .map-frame { height: 260px; }
+      :root { --header-h: 132px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="legal-topbar">
-    <strong>2026 Konstantines Consulting Services Limited LLC</strong> | Freetown, Sierra Leone
-  </div>
-
-  <nav class="navbar" id="navbar">
-    <div class="logo-container">
-      <div style="display: flex; align-items: center; gap: 0.8rem;">
-        <a href="#" class="logo">K-Rent <span>Sierra Leone</span></a>
-        <img src="img/sl.png" alt="Sierra Leone" class="flag-icon">
-      </div>
-      <div class="top-contact">
-        <a href="mailto:kt@krent.sl">kt@krent.sl</a>
-      </div>
+  <header class="site-header">
+    <div class="legal-topbar">
+      <strong>Fortis Engineer Contractors Limited LLC</strong>
+      <a href="mailto:kt@krent.sl" class="topbar-contact">kt@krent.sl</a>
     </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#fleet">Fleet</a></li>
-      <li><a href="#construction">Construction</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener">Instagram</a></li>
-    </ul>
-  </nav>
+
+    <nav class="navbar" id="navbar">
+      <div class="logo-container">
+        <a href="#home" class="logo">K-Rent <span>Sierra Leone</span></a>
+        <img src="img/sl.png" alt="Sierra Leone flag" class="flag-icon">
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#construction">Construction</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:kt@krent.sl" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
-        <h1>Heavy Equipment Rental<br>in Sierra Leone</h1>
-        <p>Reliable excavators, bulldozers & construction machinery for projects across Freetown and beyond</p>
-        <a href="mailto:kt@krent.sl" class="btn">Get a Quote</a>
-        <br>
-        <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="instagram-cta">
-          instagram: @sierraleonebuild
-        </a>
+        <span class="hero-kicker">Freetown, Sierra Leone</span>
+        <h1>Heavy Equipment Rental in Sierra Leone</h1>
+        <p>Reliable excavators, bulldozers and construction machinery for projects across Freetown and beyond — plus the crews to build what the machinery digs.</p>
+        <div class="hero-actions">
+          <a href="mailto:kt@krent.sl" class="btn btn-primary">Get a Quote</a>
+          <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+            @sierraleonebuild
+          </a>
+        </div>
       </div>
     </section>
 
+    <div class="trust-strip">
+      <div class="trust-item"><span class="trust-dot"></span>Serving clients across Sierra Leone</div>
+      <div class="trust-item"><span class="trust-dot"></span>Machinery sourced direct from the manufacturer</div>
+      <div class="trust-item"><span class="trust-dot"></span>Backed by international construction experience</div>
+    </div>
+
     <section id="fleet">
-      <h2 class="section-title">Our Fleet</h2>
+      <div class="section-head">
+        <h2 class="section-title">Our Fleet</h2>
+        <p class="section-sub">Heavy machinery for hire across Sierra Leone. More units join the fleet as they land.</p>
+      </div>
       <div class="fleet-grid">
         <article class="card">
-          <img src="img/exc2.jpg" alt="CAT Excavator">
+          <div class="card-media">
+            <img src="img/exc2.jpg" alt="CAT 320D excavator available for rental in Freetown" width="1200" height="800" loading="lazy" decoding="async">
+            <span class="badge"><span class="trust-dot"></span>Shipping now</span>
+          </div>
           <div class="card-content">
             <h3>CAT 320D Excavator</h3>
             <ul>
@@ -225,41 +435,53 @@
         </article>
 
         <article class="card">
-          <img src="img/b1.jpg" alt="Bulldozer">
+          <div class="card-media">
+            <img src="img/b1.jpg" alt="Bulldozer joining the K-Rent Sierra Leone fleet" width="1200" height="800" loading="lazy" decoding="async">
+            <span class="badge badge-soon">Coming soon</span>
+          </div>
           <div class="card-content">
             <h3>Bulldozers</h3>
-            <p>Heavy-duty site preparation</p>
-            <span class="coming-soon">Coming Soon</span>
+            <p class="muted">Heavy-duty site preparation</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="img/b2.jpg" alt="Bulldozer">
+          <div class="card-media">
+            <img src="img/b2.jpg" alt="Track dozer joining the K-Rent Sierra Leone fleet" width="1200" height="800" loading="lazy" decoding="async">
+            <span class="badge badge-soon">Coming soon</span>
+          </div>
           <div class="card-content">
             <h3>Earthmoving Fleet</h3>
-            <p>Powerful track dozers</p>
-            <span class="coming-soon">Coming Soon</span>
+            <p class="muted">Powerful track dozers</p>
           </div>
         </article>
 
         <article class="card">
-          <img src="img/tr.png" alt="Truck">
+          <div class="card-media">
+            <img src="img/tr.png" alt="Heavy material transport truck joining the K-Rent Sierra Leone fleet" width="1200" height="800" loading="lazy" decoding="async">
+            <span class="badge badge-soon">Coming soon</span>
+          </div>
           <div class="card-content">
-            <h3>Logistics & Transport</h3>
-            <p>Heavy material hauling</p>
-            <span class="coming-soon">Coming Soon</span>
+            <h3>Logistics &amp; Transport</h3>
+            <p class="muted">Heavy material hauling</p>
           </div>
         </article>
       </div>
     </section>
 
     <section id="construction">
-      <h2 class="section-title">Construction Services</h2>
+      <div class="section-head">
+        <h2 class="section-title">Construction Services</h2>
+        <p class="section-sub">From drainage crossings to finished concrete work — one team, start to finish.</p>
+      </div>
       <div class="fleet-grid">
 
         <article class="card">
-          <img src="img/culvert-box.jpg" alt="Culvert and small bridge construction Sierra Leone"
-            onerror="this.style.background='#c8d8c8'; this.style.height='200px'; this.src='';">
+          <div class="card-media">
+            <img src="img/culvert-box.jpg" alt="Culvert and small bridge construction Sierra Leone"
+              width="1200" height="800" loading="lazy" decoding="async"
+              onerror="this.style.background='#dfe4df'; this.style.height='210px'; this.src='';">
+          </div>
           <div class="card-content">
             <h3>Culverts &amp; Small Bridges</h3>
             <ul>
@@ -267,15 +489,16 @@
               <li>Small footbridges</li>
               <li>Drainage &amp; headwalls</li>
             </ul>
-            <a href="culverts.html" style="display:inline-block; margin-top:14px; font-size:0.8rem; font-weight:700; color:var(--clr-green); text-decoration:none;">
-              Learn more →
-            </a>
+            <a href="culverts.html" class="learn-more">Learn more →</a>
           </div>
         </article>
 
         <article class="card">
-          <img src="img/concrete.jpg" alt="Concrete and reinforcement works Sierra Leone"
-            onerror="this.style.background='#c8d8c8'; this.style.height='200px'; this.src='';">
+          <div class="card-media">
+            <img src="img/concrete.jpg" alt="Concrete and reinforcement works Sierra Leone"
+              width="1200" height="800" loading="lazy" decoding="async"
+              onerror="this.style.background='#dfe4df'; this.style.height='210px'; this.src='';">
+          </div>
           <div class="card-content">
             <h3>Concrete &amp; Reinforcement</h3>
             <ul>
@@ -287,8 +510,11 @@
         </article>
 
         <article class="card">
-          <img src="img/earthmoving.jpg" alt="Earthmoving and site preparation Freetown"
-            onerror="this.style.background='#c8d8c8'; this.style.height='200px'; this.src='';">
+          <div class="card-media">
+            <img src="img/earthmoving.jpg" alt="Earthmoving and site preparation Freetown"
+              width="1200" height="800" loading="lazy" decoding="async"
+              onerror="this.style.background='#dfe4df'; this.style.height='210px'; this.src='';">
+          </div>
           <div class="card-content">
             <h3>Earthmoving &amp; Site Prep</h3>
             <ul>
@@ -300,38 +526,73 @@
         </article>
 
       </div>
+      <div class="procurement-note">
+        <span class="procurement-icon">✓</span>
+        <p>Also offering <strong>equipment procurement assistance</strong> — consultations and guidance if you're sourcing machinery of your own.</p>
+        <a href="mailto:kt@krent.sl" class="procurement-link">Ask us →</a>
+      </div>
+    </section>
+
+    <section style="padding:0;">
+      <div class="where-work">
+        <div class="where-text">
+          <h2 class="section-title">Where We Work</h2>
+          <p>K-Rent is based in Freetown and works with clients across Sierra Leone — from single-site rentals to full drainage and concrete builds.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Freetown+Sierra+Leone" target="_blank" rel="noopener" class="btn btn-ghost">Get directions to our base</a>
+        </div>
+        <div class="map-frame">
+          <iframe
+            title="K-Rent Sierra Leone — based in Freetown"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-13.3517%2C8.3857%2C-13.1117%2C8.5457&layer=mapnik&marker=8.4657%2C-13.2317"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-info">
-      <p><strong>K-Rent Sierra Leone</strong></p>
-      <p>Freetown, Sierra Leone 🇸🇱</p>
-      <p style="margin-top: 18px; font-size: 1.05rem;">
-        <a href="https://instagram.com/sierraleonebuild" class="insta-link" target="_blank" rel="noopener">
-          📷 Instagram: @sierraleonebuild
-        </a>
+    <div class="footer-inner">
+      <p class="footer-line">
+        Freetown, Sierra Leone 🇸🇱 &nbsp;·&nbsp;
+        <a href="mailto:kt@krent.sl">kt@krent.sl</a> &nbsp;·&nbsp;
+        <a href="https://instagram.com/sierraleonebuild" target="_blank" rel="noopener">📷 @sierraleonebuild</a>
       </p>
-      <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.85;">
-        Primary contact for equipment inquiries
+      <p class="copyright">
+        &copy; 2026 Fortis Engineer Contractors Limited. All rights reserved. K-Rent Sierra Leone is a trading name of Fortis Engineer Contractors Limited.
       </p>
-      <p class="legal-disclosure">
-        K-Rent Sierra Leone is a trading name of<br>
-        <strong>2026 Konstantines Consulting Services Limited LLC</strong>,<br>
-        Freetown, Sierra Leone.
+      <p class="legal-links">
+        <a href="#privacy-modal">Privacy Policy</a> · <a href="#terms-modal">Terms of Use</a>
       </p>
     </div>
-    <p class="copyright">
-      &copy; 2026 Konstantines Consulting Services Limited LLC. All rights reserved.
-    </p>
   </footer>
+
+  <div class="modal-overlay" id="privacy-modal">
+    <div class="modal-box" role="dialog" aria-labelledby="privacy-title">
+      <a href="#" class="modal-close" aria-label="Close">&times;</a>
+      <h2 id="privacy-title">Privacy Policy</h2>
+      <p>This site is operated by Fortis Engineer Contractors Limited (trading as K-Rent Sierra Leone), Freetown, Sierra Leone. We don't run accounts, checkout, or tracking on this site.</p>
+      <p>The only information we ever have is what you send us directly — usually just your name or company name and email address — when you contact us for a quote. We use it only to reply to your inquiry, and keep it only as long as needed to do that.</p>
+      <p>You can ask us to see, correct, or delete anything you've sent us, at any time, by emailing <a href="mailto:kt@krent.sl">kt@krent.sl</a>.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="terms-modal">
+    <div class="modal-box" role="dialog" aria-labelledby="terms-title">
+      <a href="#" class="modal-close" aria-label="Close">&times;</a>
+      <h2 id="terms-title">Terms of Use</h2>
+      <p>This site is informational. Nothing on it is a binding offer — pricing, availability, and scope of work for equipment rental or construction services are agreed individually, by email or direct message, before any work begins.</p>
+      <p>Fortis Engineer Contractors Limited is not liable for informal availability updates shared via Instagram or email that later change.</p>
+      <p>Questions: <a href="mailto:kt@krent.sl">kt@krent.sl</a></p>
+    </div>
+  </div>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://krent.sl/#organization",
     "name": "K-Rent Sierra Leone",
-    "legalName": "Konstantines Consulting Services Limited LLC",
+    "legalName": "Fortis Engineer Contractors Limited",
     "image": "https://krent.sl/img/exc.jpg",
     "email": "kt@krent.sl",
     "url": "https://krent.sl",
@@ -343,7 +604,15 @@
       "addressLocality": "Freetown",
       "addressCountry": "SL"
     },
-    "areaServed": "SL",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.4657,
+      "longitude": -13.2317
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Sierra Leone"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Services",
@@ -351,7 +620,8 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Excavator Rental Sierra Leone" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Culvert Construction Sierra Leone" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small Bridge Construction Freetown" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Works Sierra Leone" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Works Sierra Leone" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Equipment Procurement Consulting Sierra Leone" } }
       ]
     },
     "priceRange": "$$",
@@ -362,6 +632,21 @@
   <script>
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   </script>
 </body>
